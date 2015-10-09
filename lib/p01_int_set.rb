@@ -104,8 +104,8 @@ class ResizingIntSet
     count = @count
     old_store.flatten.each do |el|
       insert(el)
-      @count = count
     end
+      @count = count
 
   end
 end

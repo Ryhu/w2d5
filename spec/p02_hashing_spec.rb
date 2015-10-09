@@ -63,6 +63,24 @@ describe "Hashing" do
     end
   end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   describe Hash do
     it "should hash to an integer" do
       expect({a: 1}.hash).to be_a(Integer)

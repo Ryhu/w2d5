@@ -1,39 +1,39 @@
 require 'rspec'
 require 'p01_int_set'
 
-# describe MaxIntSet do
-#   let(:set) { MaxIntSet.new(50) }
-#
-#   describe "#include?" do
-#     it "should return false unless the number has been inserted" do
-#       expect(set).to_not include(1)
-#     end
-#
-#     it "should return true if the number has been inserted" do
-#       set.insert(1)
-#       expect(set).to include(1)
-#     end
-#   end
-#
-#   describe "#insert" do
-#     it "should be able to insert numbers within range" do
-#       expect { set.insert(49) }.not_to raise_error
-#     end
-#
-#     it "should raise an error when inserting numbers that are out of range" do
-#       expect{ set.insert(51) }.to raise_error("Out of bounds")
-#       expect{ set.insert(-1) }.to raise_error("Out of bounds")
-#     end
-#   end
-#
-#   describe "#remove" do
-#     it "should remove a number from the set" do
-#       set.insert(1)
-#       set.remove(1)
-#       expect(set).to_not include(1)
-#     end
-#   end
-# end
+describe MaxIntSet do
+  let(:set) { MaxIntSet.new(50) }
+
+  describe "#include?" do
+    it "should return false unless the number has been inserted" do
+      expect(set).to_not include(1)
+    end
+
+    it "should return true if the number has been inserted" do
+      set.insert(1)
+      expect(set).to include(1)
+    end
+  end
+
+  describe "#insert" do
+    it "should be able to insert numbers within range" do
+      expect { set.insert(49) }.not_to raise_error
+    end
+
+    it "should raise an error when inserting numbers that are out of range" do
+      expect{ set.insert(51) }.to raise_error("Out of bounds")
+      expect{ set.insert(-1) }.to raise_error("Out of bounds")
+    end
+  end
+
+  describe "#remove" do
+    it "should remove a number from the set" do
+      set.insert(1)
+      set.remove(1)
+      expect(set).to_not include(1)
+    end
+  end
+end
 
 describe IntSet do
   let(:set) { IntSet.new(20) }
